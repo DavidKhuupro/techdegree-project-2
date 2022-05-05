@@ -1,9 +1,66 @@
-h1 {
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
     font-family: 'Mukta', sans-serif;
     color: blue;
 }
 
-li {
+nav {
+    font-family: 'Mukta', sans-serif;
+    color: blue;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0px; 
+    margin: 0px;
+}
+
+.profile {
     font-family: 'Jura', sans-serif;
     color: red;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 30px;
+} 
+
+.portfolio {
+    font-family: 'Jura', sans-serif;
+    color: red;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    body {
+        max-width: 1000px;
+    }
 }
