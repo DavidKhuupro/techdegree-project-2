@@ -7,12 +7,16 @@ h1, h2, h3, h4, h5 {
     color: blue;
 }
 
+/* set these elements to 100% width of page */
+nav, .profile, img, .container, footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
 nav {
     font-family: 'Mukta', sans-serif;
     color: blue;
     text-align: center;
-    width: 80%;
-    margin: 0 auto;
 }
 
 ul {
@@ -25,42 +29,49 @@ ul {
     font-family: 'Jura', sans-serif;
     color: red;
     text-align: center;
-    width: 70%;
-    margin: 0 auto;
 }
 
 .profile-img {
-    width: 50%;
-    margin: 0 auto;
-    padding-top: 30px;
+    width: 80%;
+    margin: auto;
 } 
 
-.portfolio {
+.container {
     font-family: 'Jura', sans-serif;
     color: red;
     text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    width: 80%;
-    margin: 0 auto;
 }
 
-img {
-    width: 100%;
-    margin: 0 auto;
-}
+.item {
+    padding: 5px 2px;
+    border: black solid 2px;
+} 
 
 footer {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
+    padding: 2% 2%;
 }
 
 /* Media Queries */
 
-@media (min-width: 768px) {
-    body {
-        max-width: 1000px;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .item {
+        display: flex;
+        width: 47%;
+        margin-right: -4px;
+        background-color: aqua;
+
+    }
+    .item:first-child, .item:nth-child(3), .item:nth-child(5) {
+        margin-right: calc(4% - 4px);
+        margin-bottom: 0;
+    }
+    .profile {
+        display: inline-block;
+        background-color: yellow;
+    }
+    .profile-img {
+        width: 40%;
     }
 }
