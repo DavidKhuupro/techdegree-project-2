@@ -2,26 +2,30 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h3, h4 {
     font-family: 'Mukta', sans-serif;
-    color: blue;
 }
 
-/* set images to stay inside divs and space */
-body, img {
+/* set images and other content to stay inside divs and entire body */
+body, img, p {
     width: 95%;
     margin: 0 auto;
 } 
 
 .main-nav {
-    font-family: 'Mukta', sans-serif;
-    color: blue;   
+    font-family: 'Mukta', sans-serif; 
 }
 
+/* align the text to be on the same level */
 .name,
 .nav-bar {
     display: block;
     text-align: center;
+}
+
+/* removing the underline for links */
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -30,14 +34,16 @@ ul {
     margin: 0;
 }
 
+/* change color of navigation bar */
 li {
+    color: rgb(109, 115, 244);
     padding: 10px 10px;
 }
 
 .profile {
     font-family: 'Jura', sans-serif;
-    color: red;
     text-align: center;
+    padding: 50px 0;
 }
 
 .profile-img {
@@ -45,17 +51,28 @@ li {
     margin: auto;
 } 
 
+.profile-text {
+    padding: 10px 0;
+}
+
+/* changing background color of main section */
 .container,
 main {
     font-family: 'Jura', sans-serif;
-    color: red;
     text-align: center;
+    background-color: aliceblue; 
 }
 
 .item {
-    padding: 5px 2px;
-    border: black solid 2px;
+    padding: 20px 5px;
     align-items: center;
+}
+
+/* used for breaking apart email onto another line */
+.contact {   
+    text-align: center;
+    padding: 100px 50px;
+    word-wrap: break-word;
 } 
 
 footer {
@@ -64,23 +81,29 @@ footer {
     padding: 2% 2%;
 }
 
+/* hide footer nav bar for mobile */
 .footer-bar {
     display: none;
 }
 
+
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
+    /* change to flex to display these classes in rows */
     .main-nav, 
     .nav-bar,
     .container {
         display: flex;
     }
+
+    /* dropping navigation to column to seperate name for nav bar */
     .main-nav {
         flex-direction: column;
         align-items: center;
     }
 
+    /* making items evenly show 2 sections per row */
     .item {
         flex: 1 50%;
     }
@@ -93,24 +116,24 @@ footer {
         display: inline-block;
         width: 100%;
         margin-top: 20px;
-        padding: 20px 20px;
+        font-size: 1.3em;
     }
     
     .profile-img {
         width: 45%;
         float: right;
-        padding: 10px 10px;
     } 
 
-    .contact {
-        text-align: center;
-        padding: 100px 100px;
+    .pic-skills {
+        width: 40%;
     }
-    
+
+    /* removing this class to show footer nav */
     .top {
         display: none;
     }
 
+    /* showing the footer bar for tablet and desktop screens */
     footer,
     .footer-bar {
         display: flex;
@@ -122,12 +145,18 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+    /* spacing name and navigation to both ends of page */
     .main-nav {
         flex-direction: row;
         justify-content: space-between;
     }
 
+    /* making items evenly show 3 sections per row */
     .item {
         flex: 1 33%;
+    }
+
+    .pic-skills {
+        width: 30%;
     }
 } 
