@@ -34,28 +34,29 @@ ul {
     margin: 0;
 }
 
-/* change color of navigation bar */
 li {
-    color: rgb(109, 115, 244);
     padding: 10px 10px;
 }
 
-.profile {
+/* adding a different color to piece of text */
+.intro {
     font-family: 'Jura', sans-serif;
     text-align: center;
     padding: 50px 0;
+    color: darkblue;
 }
 
-.profile-img {
+.img-profile {
     width: 80%;
     margin: auto;
+    padding: 10px 10px;
 } 
 
-.profile-text {
+.text-profile {
     padding: 10px 0;
 }
 
-/* changing background color of main section */
+/* adding a background color of main section */
 .container,
 main {
     font-family: 'Jura', sans-serif;
@@ -64,7 +65,7 @@ main {
 }
 
 .item {
-    padding: 20px 5px;
+    padding: 20px 1px;
     align-items: center;
 }
 
@@ -93,7 +94,8 @@ footer {
     /* change to flex to display these classes in rows */
     .main-nav, 
     .nav-bar,
-    .container {
+    .container,
+    .intro {
         display: flex;
     }
 
@@ -112,16 +114,19 @@ footer {
         flex-wrap: wrap;
     }
     
+    /* Changed the use of float img to flex display and column for direction */
     .profile {
-        display: inline-block;
-        width: 100%;
-        margin-top: 20px;
+        flex-direction: column;
+        flex: 1 50%;
+        margin-top: 100px;
         font-size: 1.3em;
     }
-    
-    .profile-img {
-        width: 45%;
-        float: right;
+
+    /* Changed the order of the text and image in profile, as well as aligning text to the left */
+    .text-profile {
+        order: -1;
+        width: 90%;
+        text-align: left;      
     } 
 
     .pic-skills {
